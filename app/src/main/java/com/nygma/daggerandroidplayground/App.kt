@@ -1,5 +1,6 @@
 package com.nygma.daggerandroidplayground
 
+import com.nygma.daggerandroidplayground.dagger.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DaggerApplication
 
