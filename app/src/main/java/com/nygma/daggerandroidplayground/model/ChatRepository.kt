@@ -1,3 +1,3 @@
 package com.nygma.daggerandroidplayground.model
 
-data class Chat(val chatId: String)
+class ChatRepository(val chatId: String)

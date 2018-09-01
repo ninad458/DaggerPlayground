@@ -1,6 +1,8 @@
 package com.nygma.daggerandroidplayground.dagger
 
 import com.nygma.daggerandroidplayground.chat.detail.ChatDetailActivity
+import com.nygma.daggerandroidplayground.chat.di.ChatDetailActivityModule
+import com.nygma.daggerandroidplayground.chat.di.ChatListActivityModule
 import com.nygma.daggerandroidplayground.chat.di.ChatModule
 import com.nygma.daggerandroidplayground.chat.parent.ChatListActivity
 import com.nygma.daggerandroidplayground.main.MainActivity
@@ -16,14 +18,14 @@ abstract class ActivityBindingModule {
     @ActivityScope
     abstract fun mainActivity(): MainActivity
 
-    @ContributesAndroidInjector(modules = [ChatModule::class])
     @ChatScope
     @ActivityScope
+    @ContributesAndroidInjector(modules = [ChatModule::class, ChatListActivityModule::class])
     abstract fun chatListActivity(): ChatListActivity
 
-    @ContributesAndroidInjector(modules = [ChatModule::class])
     @ChatScope
     @ActivityScope
+    @ContributesAndroidInjector(modules = [ChatModule::class, ChatDetailActivityModule::class])
     abstract fun chatDetailActivity(): ChatDetailActivity
 
 }

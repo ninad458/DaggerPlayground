@@ -1,0 +1,3 @@
+package com.nygma.daggerandroidplayground.chat.detail
+
+interface ChatDetailView
