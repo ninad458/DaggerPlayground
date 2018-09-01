@@ -17,8 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".chat.parent.ChatListActivity" />
-        <activity android:name=".chat.detail.ChatDetailActivity" />
+        <activity
+            android:name=".chat.parent.ChatListActivity"
+            android:label="@string/activity_chat_list" />
+        <activity
+            android:name=".chat.detail.ChatDetailActivity"
+            android:label="@string/activity_chat_detail" />
     </application>
 
 </manifest>
