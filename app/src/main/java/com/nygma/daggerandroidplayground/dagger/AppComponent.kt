@@ -11,10 +11,10 @@ import dagger.android.AndroidInjector
     ActivityBindingModule::class])
 interface AppComponent : AndroidInjector<App> {
     @Component.Builder
-    abstract class Builder {
+    interface Builder {
         @BindsInstance
-        internal abstract fun application(application: App): Builder
+        fun application(application: App): Builder
 
-        internal abstract fun build(): AppComponent
+        fun build(): AppComponent
     }
 }
